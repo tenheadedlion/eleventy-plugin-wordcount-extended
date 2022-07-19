@@ -34,8 +34,10 @@ module.exports = function (eleventyConfig) {
 In your (Nunjucks, Liquid or Handlebars) templates, use the following syntax to get the word count of a string:
 
 ```html
-// nunjucks/liquid {{ content | wordcount }} // handlebars {{{ wordcount content
-}}}
+// nunjucks/liquid 
+{{ content | wordcount }} 
+// handlebars 
+{{{ wordcount content }}}
 ```
 
 Note that the `wordcount` filter from this plugin will override [that of nunjuck](https://mozilla.github.io/nunjucks/templating.html#wordcount), if this is not what you want, you can replace `wordcount` with `wc`:

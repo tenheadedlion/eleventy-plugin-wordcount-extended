@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-wordcount-extended",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An eleventy plugin to count and output the number of words in a string",
   "main": ".eleventy.js",
   "scripts": {
