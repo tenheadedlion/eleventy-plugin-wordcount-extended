@@ -40,7 +40,15 @@ In your (Nunjucks, Liquid or Handlebars) templates, use the following syntax to 
 {{{ wordcount content }}}
 ```
 
-Note that the `wordcount` filter from this plugin will override [that of nunjuck](https://mozilla.github.io/nunjucks/templating.html#wordcount), if this is not what you want, you can replace `wordcount` with `wc`:
+Note that the `wordcount` filter from this plugin will override [that of nunjuck](https://mozilla.github.io/nunjucks/templating.html#wordcount), if this is not what you want, you can fork the repository, edit the [entry point file](https://github.com/tenheadedlion/eleventy-plugin-wordcount-extended/blob/master/.eleventy.js#L3), and replace `wordcount` with other names:
+
+```
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("wc", wordcount);
+};
+```
+
+Then apply it to the templates:
 
 ```html
 {{ content | wc }}
